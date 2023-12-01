@@ -1,0 +1,20 @@
+#!/bin/bash
+
+RANDOM_NUMBER1=$RANDOM
+RANDOM_NUMBER2=$RANDOM
+RANDOM_NUMBER3=$RANDOM
+
+logit() {
+local RANDOM_NUMBER=$1
+
+logger -i -t randomly -p user.info "$RANDOM_NUMBER"
+
+}
+
+for RANDOM_NUMBER in RANDOM_NUMBER1 RANDOM_NUMBER2 RANDOM_NUMBER3
+do
+  logit $RANDOM_NUMBER
+done
+
+
+
